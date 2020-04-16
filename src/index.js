@@ -1,5 +1,5 @@
 import 'bootstrap';
-require( 'mdbootstrap/js/mdb');
+//require( 'mdbootstrap/js/mdb');
 
 import 'bootstrap/scss/bootstrap.scss';
 
@@ -8,11 +8,8 @@ import sidebar from "./components/sidebar/sidebar";
 import './components/table/card/rotatingCard'
 import '../index.html';
 
-
+const categoriesCount = 6;
 
 const table = new Table();
-table.renderTable();
-
+table.renderTable(categoriesCount);
 sidebar();
-const input = document.createElement('input');
-document.body.prepend(input);

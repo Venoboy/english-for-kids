@@ -1,8 +1,6 @@
 var $ = require('jquery');
 require( 'popper.js');
 
-console.log('kek');
-
 function flip(){
     clearTimeout(backVar);
         $(".top").css({

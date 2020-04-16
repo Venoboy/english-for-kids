@@ -44,10 +44,17 @@ html [type='button'],
 @import "custom";
 @import "../components/sidebar/sidebar";
 @import "../components/table/card/rotating-card";
+@import "../components/table/cardMain/cardMain";
 
 
-.alert {
-  width: 50%;
-  margin: auto;
+#three-cols-layout {
+  padding: 30px;
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+"a a a"
+"a a a";
+  grid-gap: 30px 25px;
+  grid-template-columns: repeat(3, 300px);
 }
 
