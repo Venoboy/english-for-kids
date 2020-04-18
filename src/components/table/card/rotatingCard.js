@@ -1,42 +1,41 @@
-var $ = require('jquery');
-require( 'popper.js');
+import img from '../../../assets/img/cry.jpg'
+import rotatePng from '../../../assets/img/rotate.png';
+import classes from './_rotatingCard.module.scss';
 
-function flip(){
-    clearTimeout(backVar);
-        $(".top").css({
-        "box-shadow": "0px 1px 10px -2px rgba(0,0,0,0.43)",
-        "transform": "translateY(-100%)"
-    });
-    flipVar = setTimeout( function(){
-        $(".flip").css({
-            "transform": "rotateY(180deg)"
-        });
-        $(".radius-front").hide();
-    }, 400);
-}
+const rotatingCard = () => {
+  let div = document.createElement('div');
+  div.classList.add(classes.card);
 
-function back(){
-    clearTimeout(flipVar);
-  	$(".radius-front").show();
-    backVar = setTimeout( function(){
-        $(".top").css({
-            "box-shadow": "0px 10px 20px 0px rgba(0,0,0,0.43)",
-            "transform": "translateY(-25px)"
-        });
+  const divFront = document.createElement('div');
+  divFront.classList.add(classes.front);
+  const frontText = document.createElement('div');
+  frontText.innerHTML = 'Text 1';
+  frontText.classList.add(classes.title);
 
-    }, 400);
-    $(".flip").css({
-            "transform": "none"
-        });
-}
+  const rotateImg = document.createElement('div');
+  rotateImg.className = classes.rotate;
+  rotateImg.onclick = () => {
+    div.style.transform = 'rotateY(180deg)'
+  };
+  divFront.append(frontText, rotateImg);
 
-var flipVar, backVar;
 
-$(function(){
-    $(".thecard").hover(function(){
-        flip();
-    }, function(){
-        back();
-    });
+  const divBack = document.createElement('div');
+  divBack.classList.add(classes.back);
+  const backText = document.createElement('div');
+  backText.innerHTML = 'Text 2';
+  backText.classList.add(classes.title);
+  divBack.append(backText);
 
-});
+  divFront.style.background = `url(${img}) no-repeat`;
+  divBack.style.background = `url(${img}) no-repeat`;
+
+  div.onmouseleave = () => {
+    div.style.transform = 'rotateY(0)'
+  };
+
+  div.append(divFront, divBack);
+  return div;
+};
+
+export default rotatingCard;

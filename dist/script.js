@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "a96cb907ae7523f49b82";
+/******/ 	var hotCurrentHash = "6869be0004a23524d730";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -805,7 +805,7 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // Module
-var code = "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\r\n  <title>English for kids</title>\r\n</head>\r\n<body>\r\n<div class=\"d-flex\" id=\"wrapper\">\r\n\r\n  <!-- Sidebar -->\r\n  <div class=\"bg-light border-right\" id=\"sidebar-wrapper\">\r\n    <div class=\"sidebar-heading\">Start Bootstrap</div>\r\n    <div class=\"list-group list-group-flush\">\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Dashboard</a>\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Shortcuts</a>\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Overview</a>\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Events</a>\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Profile</a>\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Status</a>\r\n    </div>\r\n  </div>\r\n  <!-- /#sidebar-wrapper -->\r\n\r\n  <!-- Page Content -->\r\n  <div id=\"page-content-wrapper\">\r\n    <nav class=\"navbar navbar-expand-lg navbar-light bg-light border-bottom\">\r\n      <button class=\"btn btn-primary\" id=\"menu-toggle\">Toggle Menu</button>\r\n    </nav>\r\n    <div id=\"three-cols-layout\"></div>\r\n  </div>\r\n\r\n\r\n  <!-- /#page-content-wrapper -->\r\n</div>\r\n\r\n\r\n</body>\r\n</html>";
+var code = "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\r\n  <title>English for kids</title>\r\n</head>\r\n<body>\r\n<div class=\"d-flex\" id=\"wrapper\">\r\n\r\n  <!-- Sidebar -->\r\n  <div class=\"bg-light border-right\" id=\"sidebar-wrapper\">\r\n    <div class=\"sidebar-heading\">Start Bootstrap</div>\r\n    <div class=\"list-group list-group-flush\">\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Dashboard</a>\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Shortcuts</a>\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Overview</a>\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Events</a>\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Profile</a>\r\n      <a href=\"#\" class=\"list-group-item list-group-item-action bg-light\">Status</a>\r\n    </div>\r\n  </div>\r\n  <!-- /#sidebar-wrapper -->\r\n\r\n  <!-- Page Content -->\r\n  <div id=\"page-content-wrapper\">\r\n    <nav class=\"navbar navbar-expand-lg navbar-light bg-light border-bottom\">\r\n      <button class=\"btn btn-primary\" id=\"menu-toggle\">Toggle Menu</button>\r\n    </nav>\r\n    <div id=\"three-cols-layout\"></div>\r\n    <div id=\"test\"></div>\r\n  </div>\r\n\r\n  <!-- /#page-content-wrapper -->\r\n</div>\r\n<div class=\"rotate\" ></div>\r\n\r\n</body>\r\n</html>";
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (code);
 
@@ -29640,7 +29640,8 @@ var map = {
 	"./img/rabbit.jpg": "./src/assets/img/rabbit.jpg",
 	"./img/repeat.svg": "./src/assets/img/repeat.svg",
 	"./img/ride.jpg": "./src/assets/img/ride.jpg",
-	"./img/rotate.svg": "./src/assets/img/rotate.svg",
+	"./img/rotate-old.svg": "./src/assets/img/rotate-old.svg",
+	"./img/rotate.png": "./src/assets/img/rotate.png",
 	"./img/run.jpg": "./src/assets/img/run.jpg",
 	"./img/sad.jpg": "./src/assets/img/sad.jpg",
 	"./img/scared.jpg": "./src/assets/img/scared.jpg",
@@ -30368,7 +30369,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "assets/img/b58f39e399580aeba9d7d3dc1610c4f5.svg");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "assets/img/9a762cb8b818462ec4ff0b9364eebebe.svg");
 
 /***/ }),
 
@@ -30810,7 +30811,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "assets/img/8d79a4b1741b7ae46292209e2e14d492.svg");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "assets/img/847af73cbd6bdb859ff12b1f01172507.svg");
 
 /***/ }),
 
@@ -30827,16 +30828,29 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/assets/img/rotate.svg":
+/***/ "./src/assets/img/rotate-old.svg":
+/*!***************************************!*\
+  !*** ./src/assets/img/rotate-old.svg ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "assets/img/8564a665cd6d24805ec6cbbb1c8df495.svg");
+
+/***/ }),
+
+/***/ "./src/assets/img/rotate.png":
 /*!***********************************!*\
-  !*** ./src/assets/img/rotate.svg ***!
+  !*** ./src/assets/img/rotate.png ***!
   \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "assets/img/76f828e04eb56091f329dd4cfcc31885.svg");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "assets/img/510454d10a2a5cb27e34e02d342dfa60.png");
 
 /***/ }),
 
@@ -30992,7 +31006,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "assets/img/fdd25c50870d5477af11cc4d96494d26.svg");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "assets/img/b09db9a10e9123b787720d29b481a03c.svg");
 
 /***/ }),
 
@@ -31005,7 +31019,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "assets/img/5af6f63f4e33faf8ca5d56d4568e2fcf.svg");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "assets/img/70528b6d0beeeda4dcfb949146737d34.svg");
 
 /***/ }),
 
@@ -31112,6 +31126,18 @@ module.exports.default = exports.default;
 
 /***/ }),
 
+/***/ "./src/components/table/card/_rotatingCard.module.scss":
+/*!*************************************************************!*\
+  !*** ./src/components/table/card/_rotatingCard.module.scss ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"card":"src-components-table-card-_rotatingCard-module__card--JRITc","back":"src-components-table-card-_rotatingCard-module__back--1r4mJ","front":"src-components-table-card-_rotatingCard-module__front--Hernv","title":"src-components-table-card-_rotatingCard-module__title--rut_u","rotate":"src-components-table-card-_rotatingCard-module__rotate--3FPno"};
+
+/***/ }),
+
 /***/ "./src/components/table/card/card.js":
 /*!*******************************************!*\
   !*** ./src/components/table/card/card.js ***!
@@ -31208,6 +31234,59 @@ module.exports = {"card":"src-components-table-card-card-module__card--2_i9r"};
 
 /***/ }),
 
+/***/ "./src/components/table/card/rotate.js":
+/*!*********************************************!*\
+  !*** ./src/components/table/card/rotate.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var rotate = function rotate() {
+  var flipVar;
+
+  function flip() {
+    flipVar = setTimeout(function () {
+      var flip = document.querySelector('.flip');
+      flip.style.cssText = "transform: rotateY(180deg)";
+      var radiusFront = document.querySelector('.radius-front');
+      radiusFront.style.display = "none";
+    }, 400);
+  }
+
+  function back() {
+    clearTimeout(flipVar);
+    var radiusFront = document.querySelector('.radius-front');
+    radiusFront.style.display = "block";
+    var flip = document.querySelector('.flip');
+    flip.style.transform = "none";
+  }
+
+  var thecard = document.querySelector('.thecard');
+
+  thecard.onmouseenter = function () {
+    flip();
+  };
+
+  thecard.onmouseleave = function () {
+    back();
+  };
+};
+
+var _default = rotate;
+exports["default"] = _default;
+module.exports = exports.default;
+module.exports.default = exports.default;
+
+/***/ }),
+
 /***/ "./src/components/table/card/rotatingCard.js":
 /*!***************************************************!*\
   !*** ./src/components/table/card/rotatingCard.js ***!
@@ -31218,46 +31297,56 @@ module.exports = {"card":"src-components-table-card-card-module__card--2_i9r"};
 "use strict";
 
 
-var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-
-__webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js");
-
-function flip() {
-  clearTimeout(backVar);
-  $(".top").css({
-    "box-shadow": "0px 1px 10px -2px rgba(0,0,0,0.43)",
-    "transform": "translateY(-100%)"
-  });
-  flipVar = setTimeout(function () {
-    $(".flip").css({
-      "transform": "rotateY(180deg)"
-    });
-    $(".radius-front").hide();
-  }, 400);
-}
-
-function back() {
-  clearTimeout(flipVar);
-  $(".radius-front").show();
-  backVar = setTimeout(function () {
-    $(".top").css({
-      "box-shadow": "0px 10px 20px 0px rgba(0,0,0,0.43)",
-      "transform": "translateY(-25px)"
-    });
-  }, 400);
-  $(".flip").css({
-    "transform": "none"
-  });
-}
-
-var flipVar, backVar;
-$(function () {
-  $(".thecard").hover(function () {
-    flip();
-  }, function () {
-    back();
-  });
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
+exports["default"] = void 0;
+
+var _cry = _interopRequireDefault(__webpack_require__(/*! ../../../assets/img/cry.jpg */ "./src/assets/img/cry.jpg"));
+
+var _rotate = _interopRequireDefault(__webpack_require__(/*! ../../../assets/img/rotate.png */ "./src/assets/img/rotate.png"));
+
+var _rotatingCardModule = _interopRequireDefault(__webpack_require__(/*! ./_rotatingCard.module.scss */ "./src/components/table/card/_rotatingCard.module.scss"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var rotatingCard = function rotatingCard() {
+  var div = document.createElement('div');
+  div.classList.add(_rotatingCardModule["default"].card);
+  var divFront = document.createElement('div');
+  divFront.classList.add(_rotatingCardModule["default"].front);
+  var frontText = document.createElement('div');
+  frontText.innerHTML = 'Text 1';
+  frontText.classList.add(_rotatingCardModule["default"].title);
+  var rotateImg = document.createElement('div');
+  rotateImg.className = _rotatingCardModule["default"].rotate;
+
+  rotateImg.onclick = function () {
+    div.style.transform = 'rotateY(180deg)';
+  };
+
+  divFront.append(frontText, rotateImg);
+  var divBack = document.createElement('div');
+  divBack.classList.add(_rotatingCardModule["default"].back);
+  var backText = document.createElement('div');
+  backText.innerHTML = 'Text 2';
+  backText.classList.add(_rotatingCardModule["default"].title);
+  divBack.append(backText);
+  divFront.style.background = "url(".concat(_cry["default"], ") no-repeat");
+  divBack.style.background = "url(".concat(_cry["default"], ") no-repeat");
+
+  div.onmouseleave = function () {
+    div.style.transform = 'rotateY(0)';
+  };
+
+  div.append(divFront, divBack);
+  return div;
+};
+
+var _default = rotatingCard;
+exports["default"] = _default;
+module.exports = exports.default;
+module.exports.default = exports.default;
 
 /***/ }),
 
@@ -31296,18 +31385,17 @@ var cardMainCreate = /*#__PURE__*/function () {
             card = document.createElement('a');
             card.classList.add('cardMain');
             card.href = '#';
-            console.log(data);
-            _context.next = 6;
+            _context.next = 5;
             return Promise.resolve().then(function () {
               return _interopRequireWildcard(__webpack_require__("./src/assets sync recursive ^\\.\\/.*$")("./".concat(data.image)));
             });
 
-          case 6:
+          case 5:
             path = _context.sent;
             card.innerHTML = "<img src=".concat(path["default"], " alt=").concat(name, ">").concat(name);
             return _context.abrupt("return", card);
 
-          case 9:
+          case 8:
           case "end":
             return _context.stop();
         }
@@ -31348,6 +31436,8 @@ var _cards = _interopRequireDefault(__webpack_require__(/*! ../../data/cards */ 
 
 var _cardMainCreate = _interopRequireDefault(__webpack_require__(/*! ./cardMain/cardMainCreate */ "./src/components/table/cardMain/cardMainCreate.js"));
 
+var _rotatingCard = _interopRequireDefault(__webpack_require__(/*! ./card/rotatingCard */ "./src/components/table/card/rotatingCard.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -31371,42 +31461,22 @@ var Table = /*#__PURE__*/function () {
     key: "renderTable",
     value: function () {
       var _renderTable = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(categoriesCount) {
-        var wrapper, categories, i;
+        var layout, mainWrapper, test;
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                wrapper = document.getElementById('three-cols-layout');
-                categories = [];
-                i = 0;
+                layout = document.getElementById('three-cols-layout');
+                mainWrapper = document.getElementById('wrapper');
+                test = document.getElementById('test'); // const categories = [];
+                // for (let i = 0; i < categoriesCount; i+=1) {
+                //   categories.push(await cardMainCreate(cards[0][i], cards[i + 1][0]))
+                // }
+                // layout.append(...categories);
 
-              case 3:
-                if (!(i < categoriesCount)) {
-                  _context.next = 12;
-                  break;
-                }
+                test.append((0, _rotatingCard["default"])());
 
-                _context.t0 = categories;
-                _context.next = 7;
-                return (0, _cardMainCreate["default"])(_cards["default"][0][i], _cards["default"][i + 1][0]);
-
-              case 7:
-                _context.t1 = _context.sent;
-
-                _context.t0.push.call(_context.t0, _context.t1);
-
-              case 9:
-                i += 1;
-                _context.next = 3;
-                break;
-
-              case 12:
-                //const cardMain = await cardMainCreate(cards[0][0], cards[1][8]);
-                //console.log(categories);
-                wrapper.append.apply(wrapper, categories); // const testCard = new Card(cards[1][0]);
-                // testCard.createCard();
-
-              case 13:
+              case 4:
               case "end":
                 return _context.stop();
             }
@@ -31712,7 +31782,7 @@ var _table = _interopRequireDefault(__webpack_require__(/*! ./components/table/t
 
 var _sidebar = _interopRequireDefault(__webpack_require__(/*! ./components/sidebar/sidebar */ "./src/components/sidebar/sidebar.js"));
 
-__webpack_require__(/*! ./components/table/card/rotatingCard */ "./src/components/table/card/rotatingCard.js");
+__webpack_require__(/*! ./components/table/card/rotate */ "./src/components/table/card/rotate.js");
 
 __webpack_require__(/*! ../index.html */ "./index.html");
 

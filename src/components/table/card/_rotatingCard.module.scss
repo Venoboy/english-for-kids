@@ -1,0 +1,77 @@
+.container {
+}
+
+.card {
+  position: relative;
+
+  transform-style: preserve-3d;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  width: 300px;
+  height: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px 25px;
+
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .4);
+
+  transition: box-shadow .25s linear, transform .7s, -webkit-transform .7s;
+}
+
+.card:hover {
+  box-shadow: -1px 5px 15px 0 rgba(0, 0, 0, .5);
+}
+
+.back,
+.front {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+
+.front {
+}
+
+.back {
+  transform: rotateY(-180deg);
+}
+
+.title {
+  margin-top: 200px;
+  padding: 0 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  line-height: 45px;
+  text-align: center;
+  width: 100%;
+  pointer-events: none;
+  background: #fff;
+  color: #212529;
+}
+
+.back, .front, .rotate {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.rotate {
+  background: url("../../../assets/img/rotate.png") no-repeat center 16px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: 32px;
+
+
+  bottom: 5px;
+  right: 5px;
+  transition: 0.3s;
+  filter: grayscale(1);
+}

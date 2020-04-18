@@ -43,13 +43,13 @@ html [type='button'],
 
 @import "custom";
 @import "../components/sidebar/sidebar";
-@import "../components/table/card/rotating-card";
 @import "../components/table/cardMain/cardMain";
 
 
 #three-cols-layout {
+
   padding: 30px;
-  display: grid;
+  display: none;
   justify-content: center;
   grid-template-areas:
 "a a a"
