@@ -1,0 +1,11 @@
+
+#three-cols-layout {
+  padding: 30px;
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+"a a a"
+"a a a";
+  grid-gap: 30px 25px;
+  grid-template-columns: repeat(3, 300px);
+}
