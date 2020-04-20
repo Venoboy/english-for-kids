@@ -1,11 +1,33 @@
 
 #three-cols-layout {
-  padding: 30px;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px auto;
   justify-content: center;
-  grid-template-areas:
-"a a a"
-"a a a";
-  grid-gap: 30px 25px;
-  grid-template-columns: repeat(3, 300px);
+  max-width: 1200px;
 }
+
+.navbar {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardMain {
+  margin: 25px 30px;
+};
+
+//#three-cols-layout {
+//  padding: 30px;
+//  display: grid;
+//  justify-content: center;
+//  grid-template-areas:
+//"a a a"
+//"a a a";
+//  grid-gap: 30px 25px;
+//  grid-template-columns: repeat(3, 300px);
+//}

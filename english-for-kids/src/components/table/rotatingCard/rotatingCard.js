@@ -1,5 +1,3 @@
-import img from '../../../assets/img/cry.jpg'
-import rotatePng from '../../../assets/img/rotate.png';
 import classes from './_rotatingCard.module.scss';
 
 const rotatingCard = async (data) => {
@@ -31,6 +29,16 @@ const rotatingCard = async (data) => {
 
   divFront.style.background = `url(${path.default}) no-repeat`;
   divBack.style.background = `url(${path.default}) no-repeat`;
+
+  divFront.onclick = async (ev) => {
+    ev.preventDefault();
+    let audio = document.createElement('AUDIO');
+    const audioPath = await import(`../../../assets/${data.audioSrc}`);
+    audio.src = audioPath.default;
+    if (ev.target !== rotateImg) {
+      audio.play();
+    }
+  };
 
   div.onmouseleave = () => {
     div.style.transform = 'rotateY(0)'

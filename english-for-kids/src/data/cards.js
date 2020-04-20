@@ -1,5 +1,5 @@
 const cards = [ 
-  ['Action (set A)', 'Action (set B)', 'Animal (set A)', 'Animal (set B)', 'Clothes', 'Emotions'],
+  ['Action (set A)', 'Action (set B)', 'Animal (set A)', 'Animal (set B)', 'Clothes', 'Emotions', 'Games', 'Professions'],
   [
     {
       word: 'cry',
@@ -48,7 +48,19 @@ const cards = [
       translation: 'прыгать',
       image: 'img/jump.jpg',
       audioSrc: 'audio/jump.mp3'
-    }
+    },
+    {
+      word: 'build',
+      translation: 'строить',
+      image: 'img/build.jpg',
+      audioSrc: 'audio/build.mp3'
+    },
+    {
+      word: 'teach',
+      translation: 'учить',
+      image: 'img/teach.jpg',
+      audioSrc: 'audio/teach.mp3'
+    },
   ],
   [
     {
@@ -98,7 +110,13 @@ const cards = [
       translation: 'плавать',
       image: 'img/swim.jpg',
       audioSrc: 'audio/swim.mp3'
-    }
+    },
+    {
+      word: 'hide',
+      translation: 'прятаться',
+      image: 'img/hide.jpg',
+      audioSrc: 'audio/hide.mp3'
+    },
   ],
   [
     {
@@ -148,7 +166,19 @@ const cards = [
       translation: 'овца',
       image: 'img/sheep.jpg',
       audioSrc: 'audio/sheep.mp3'
-    }
+    },
+    {
+      word: 'rhino',
+      translation: 'носорог',
+      image: 'img/rhino.jpg',
+      audioSrc: 'audio/rhino.mp3'
+    },
+    {
+      word: 'elephant',
+      translation: 'слон',
+      image: 'img/elephant.jpg',
+      audioSrc: 'audio/elephant.mp3'
+    },
   ],
   [
     {
@@ -198,7 +228,19 @@ const cards = [
       translation: 'дельфин',
       image: 'img/dolphin.jpg',
       audioSrc: 'audio/dolphin.mp3'
-    }
+    },
+    {
+      word: 'monkey',
+      translation: 'обезьяна',
+      image: 'img/monkey.jpg',
+      audioSrc: 'audio/monkey.mp3'
+    },
+    {
+      word: 'kangaroo',
+      translation: 'кенгуру',
+      image: 'img/kangaroo.jpg',
+      audioSrc: 'audio/kangaroo.mp3'
+    },
   ],
   [
     {
@@ -248,7 +290,19 @@ const cards = [
       translation: 'туфли',
       image: 'img/shoe.jpg',
       audioSrc: 'audio/shoe.mp3'
-    }
+    },
+    {
+      word: 'jacket',
+      translation: 'куртка',
+      image: 'img/jacket.jpg',
+      audioSrc: 'audio/jacket.mp3'
+    },
+    {
+      word: 'vest',
+      translation: 'жилет',
+      image: 'img/vest.jpg',
+      audioSrc: 'audio/vest.mp3'
+    },
   ],
   [
     {
@@ -298,9 +352,121 @@ const cards = [
       translation: 'смех',
       image: 'img/laugh.jpg',
       audioSrc: 'audio/laugh.mp3'
+    },
+    {
+      word: 'daydreaming',
+      translation: 'мечтательность',
+      image: 'img/daydreaming.jpg',
+      audioSrc: 'audio/daydreaming.mp3'
+    },
+    {
+      word: 'amazement',
+      translation: 'изумление',
+      image: 'img/amazement.jpg',
+      audioSrc: 'audio/amazement.mp3'
+    }
+  ],
+  [
+    {
+      word: 'football',
+      translation: 'футбол',
+      image: 'img/football.jpg',
+      audioSrc: 'audio/football.mp3'
+    },
+    {
+      word: 'hockey',
+      translation: 'хоккей',
+      image: 'img/hockey.jpg',
+      audioSrc: 'audio/hockey.mp3'
+    },
+    {
+      word: 'chess',
+      translation: 'шахматы',
+      image: 'img/chess.jpg',
+      audioSrc: 'audio/chess.mp3'
+    },
+    {
+      word: 'figure skating',
+      translation: 'фигурное катание',
+      image: 'img/figure skating.jpg',
+      audioSrc: 'audio/figure skating.mp3'
+    },
+    {
+      word: 'catch up',
+      translation: 'догонялки',
+      image: 'img/catch up.jpg',
+      audioSrc: 'audio/catch up.mp3'
+    },
+    {
+      word: 'ping-pong',
+      translation: 'настольный теннис',
+      image: 'img/ping-pong.jpg',
+      audioSrc: 'audio/ping-pong.mp3'
+    },
+    {
+      word: 'board games',
+      translation: 'настольные игры',
+      image: 'img/board games.jpg',
+      audioSrc: 'audio/board games.mp3'
+    },
+    {
+      word: 'snowball',
+      translation: 'снежки',
+      image: 'img/snowball.jpg',
+      audioSrc: 'audio/snowball.mp3'
+    },
+  ],
+  [
+    {
+      word: 'scientist',
+      translation: 'ученый',
+      image: 'img/scientist.jpg',
+      audioSrc: 'audio/scientist.mp3'
+    },
+    {
+      word: 'doctor',
+      translation: 'врач',
+      image: 'img/doctor.jpg',
+      audioSrc: 'audio/doctor.mp3'
+    },
+    {
+      word: 'pilot',
+      translation: 'пилот',
+      image: 'img/pilot.jpg',
+      audioSrc: 'audio/pilot.mp3'
+    },
+    {
+      word: 'salesman',
+      translation: 'продавец',
+      image: 'img/salesman.jpg',
+      audioSrc: 'audio/salesman.mp3'
+    },
+    {
+      word: 'judge',
+      translation: 'судья',
+      image: 'img/judge.jpg',
+      audioSrc: 'audio/judge.mp3'
+    },
+    {
+      word: 'mechanic',
+      translation: 'техник',
+      image: 'img/mechanic.jpg',
+      audioSrc: 'audio/mechanic.mp3'
+    },
+    {
+      word: 'programmer',
+      translation: 'программист',
+      image: 'img/programmer.jpg',
+      audioSrc: 'audio/programmer.mp3'
+    },
+    {
+      word: 'farmer',
+      translation: 'фермер',
+      image: 'img/farmer.jpg',
+      audioSrc: 'audio/farmer.mp3'
     }
   ]
-]
+];
 
 
 
