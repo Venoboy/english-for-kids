@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "147438fb734e3f002080";
+/******/ 	var hotCurrentHash = "5f478236536f893b4076";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -794,19 +794,6 @@
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./favicon.ico":
-/*!*********************!*\
-  !*** ./favicon.ico ***!
-  \*********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "favicon.ico");
-
-/***/ }),
 
 /***/ "./node_modules/ansi-html/index.js":
 /*!*****************************************!*\
@@ -32093,15 +32080,7 @@ var _renderTable = _interopRequireDefault(__webpack_require__(/*! ../renderTable
 
 var _sidebarHighlighting = _interopRequireDefault(__webpack_require__(/*! ../../sidebar/sidebarHighlighting */ "./src/components/sidebar/sidebarHighlighting.js"));
 
-var _cry = _interopRequireDefault(__webpack_require__(/*! ../../../assets/img/cry.jpg */ "./src/assets/img/cry.jpg"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -32117,13 +32096,7 @@ var cardMainCreate = /*#__PURE__*/function () {
             card = document.createElement('a');
             card.classList.add('cardMain');
             card.href = '#';
-            _context.next = 5;
-            return Promise.resolve().then(function () {
-              return _interopRequireWildcard(__webpack_require__("./src/assets sync recursive ^\\.\\/.*$")("./".concat(data.image)));
-            });
-
-          case 5:
-            path = _context.sent;
+            path = __webpack_require__("./src/assets sync recursive ^\\.\\/.*$")("./".concat(data.image));
             card.innerHTML = "<img src=".concat(path["default"], " alt=").concat(name, ">").concat(name);
 
             card.onclick = function () {
@@ -32133,7 +32106,7 @@ var cardMainCreate = /*#__PURE__*/function () {
 
             return _context.abrupt("return", card);
 
-          case 9:
+          case 7:
           case "end":
             return _context.stop();
         }
@@ -32836,8 +32809,6 @@ var _sandwichMenu = _interopRequireDefault(__webpack_require__(/*! ./components/
 var _menuSelector = _interopRequireDefault(__webpack_require__(/*! ./components/sidebar/menuSelector */ "./src/components/sidebar/menuSelector.js"));
 
 var _renderTable = _interopRequireDefault(__webpack_require__(/*! ./components/table/renderTable */ "./src/components/table/renderTable.js"));
-
-__webpack_require__(/*! ../favicon.ico */ "./favicon.ico");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

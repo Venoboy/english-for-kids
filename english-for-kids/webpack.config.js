@@ -106,7 +106,8 @@ module.exports = (env, options) => {
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        template: 'index.html'
+        template: 'index.html',
+        favicon: './favicon.ico'
       }),
       new MiniCssExtractPlugin({
         filename: 'style.css'
