@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "cab910f2bfa678ff5f1e";
+/******/ 	var hotCurrentHash = "147438fb734e3f002080";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -794,6 +794,19 @@
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./favicon.ico":
+/*!*********************!*\
+  !*** ./favicon.ico ***!
+  \*********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "favicon.ico");
+
+/***/ }),
 
 /***/ "./node_modules/ansi-html/index.js":
 /*!*****************************************!*\
@@ -31979,7 +31992,7 @@ var menuSelector = function menuSelector() {
 
   document.body.onclick = function (ev) {
     var wrapper = document.getElementById('wrapper');
-    var menuBtn = document.getElementById('sandwichmenu'); //закрыть меню
+    var menuBtn = document.getElementById('sandwichmenu'); // закрыть меню
 
     if (ev.target.id !== 'sidebar-wrapper' && !wrapper.classList.value.includes('toggled') && ev.target.nodeName !== 'path' && ev.target.nodeName !== 'svg') {
       menuBtn.classList.remove('active');
@@ -31999,10 +32012,10 @@ module.exports.default = exports.default;
 
 /***/ }),
 
-/***/ "./src/components/sidebar/sidebar.js":
-/*!*******************************************!*\
-  !*** ./src/components/sidebar/sidebar.js ***!
-  \*******************************************/
+/***/ "./src/components/sidebar/sidebarHighlighting.js":
+/*!*******************************************************!*\
+  !*** ./src/components/sidebar/sidebarHighlighting.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -32014,22 +32027,47 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var sidebar = function sidebar() {
-  var toggleMenu = document.getElementById('menu-toggle');
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
-  toggleMenu.onclick = function (ev) {
-    ev.preventDefault();
-    var wrapper = document.getElementById('wrapper');
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-    if (wrapper.classList.value.includes('toggled')) {
-      wrapper.classList.remove('toggled');
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+var sidebarHighlighting = function sidebarHighlighting(activeElement) {
+  var listGroup = document.querySelector('.list-group');
+
+  var setActive = function setActive(element) {
+    var listGroupArr = _toConsumableArray(listGroup.children);
+
+    listGroupArr.forEach(function (elem) {
+      elem.classList.remove('active');
+    });
+
+    if (typeof element === 'string') {
+      listGroupArr.filter(function (elem) {
+        return elem.innerHTML === activeElement;
+      })[0].classList.add('active');
     } else {
-      wrapper.classList.add('toggled');
+      element.target.classList.add('active');
     }
   };
+
+  listGroup.onclick = function (ev) {
+    return setActive(ev);
+  };
+
+  if (activeElement) {
+    setActive(activeElement);
+  }
 };
 
-var _default = sidebar;
+var _default = sidebarHighlighting;
 exports["default"] = _default;
 module.exports = exports.default;
 module.exports.default = exports.default;
@@ -32050,6 +32088,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+
+var _renderTable = _interopRequireDefault(__webpack_require__(/*! ../renderTable */ "./src/components/table/renderTable.js"));
+
+var _sidebarHighlighting = _interopRequireDefault(__webpack_require__(/*! ../../sidebar/sidebarHighlighting */ "./src/components/sidebar/sidebarHighlighting.js"));
+
+var _cry = _interopRequireDefault(__webpack_require__(/*! ../../../assets/img/cry.jpg */ "./src/assets/img/cry.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -32079,9 +32125,15 @@ var cardMainCreate = /*#__PURE__*/function () {
           case 5:
             path = _context.sent;
             card.innerHTML = "<img src=".concat(path["default"], " alt=").concat(name, ">").concat(name);
+
+            card.onclick = function () {
+              (0, _sidebarHighlighting["default"])(card.innerText);
+              (0, _renderTable["default"])(name);
+            };
+
             return _context.abrupt("return", card);
 
-          case 8:
+          case 9:
           case "end":
             return _context.stop();
         }
@@ -32116,11 +32168,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _rotatingCard = _interopRequireDefault(__webpack_require__(/*! ./rotatingCard/rotatingCard */ "./src/components/table/rotatingCard/rotatingCard.js"));
-
 var _cards = _interopRequireDefault(__webpack_require__(/*! ../../data/cards */ "./src/data/cards.js"));
 
 var _cardMainCreate = _interopRequireDefault(__webpack_require__(/*! ./cardMain/cardMainCreate */ "./src/components/table/cardMain/cardMainCreate.js"));
+
+var _rotatingCard = _interopRequireDefault(__webpack_require__(/*! ./rotatingCard/rotatingCard */ "./src/components/table/rotatingCard/rotatingCard.js"));
 
 var _menuSelector = _interopRequireDefault(__webpack_require__(/*! ../sidebar/menuSelector */ "./src/components/sidebar/menuSelector.js"));
 
@@ -32132,83 +32184,78 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var renderTable = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(categoryName) {
-    var category, categoriesCount, layout, mainWrapper, test, categoriesArr, i, categoryNumber, _i;
+    var category, categoriesCount, layout, categoriesArr, i, categoryNumber, _i;
 
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             category = categoryName || 'Main Page';
-            console.log(category);
             categoriesCount = _cards["default"][0].length;
             (0, _menuSelector["default"])();
             layout = document.getElementById('three-cols-layout');
-            mainWrapper = document.getElementById('wrapper');
-            test = document.getElementById('test');
             categoriesArr = [];
 
-            if (!(category === "Main Page")) {
-              _context.next = 21;
+            if (!(category === 'Main Page')) {
+              _context.next = 18;
               break;
             }
 
             i = 0;
 
-          case 10:
+          case 7:
             if (!(i < categoriesCount)) {
-              _context.next = 19;
+              _context.next = 16;
               break;
             }
 
             _context.t0 = categoriesArr;
-            _context.next = 14;
+            _context.next = 11;
             return (0, _cardMainCreate["default"])(_cards["default"][i + 1][0], _cards["default"][0][i]);
 
-          case 14:
+          case 11:
             _context.t1 = _context.sent;
 
             _context.t0.push.call(_context.t0, _context.t1);
 
-          case 16:
+          case 13:
             i += 1;
-            _context.next = 10;
+            _context.next = 7;
             break;
 
-          case 19:
-            _context.next = 33;
+          case 16:
+            _context.next = 29;
             break;
 
-          case 21:
+          case 18:
             categoryNumber = _cards["default"][0].indexOf(category);
-            console.log(categoryNumber);
             _i = 0;
 
-          case 24:
+          case 20:
             if (!(_i < categoriesCount)) {
-              _context.next = 33;
+              _context.next = 29;
               break;
             }
 
             _context.t2 = categoriesArr;
-            _context.next = 28;
+            _context.next = 24;
             return (0, _rotatingCard["default"])(_cards["default"][categoryNumber + 1][_i]);
 
-          case 28:
+          case 24:
             _context.t3 = _context.sent;
 
             _context.t2.push.call(_context.t2, _context.t3);
 
-          case 30:
+          case 26:
             _i += 1;
-            _context.next = 24;
+            _context.next = 20;
             break;
 
-          case 33:
-            console.log(categoriesArr);
+          case 29:
             layout.innerHTML = '';
             layout.append.apply(layout, categoriesArr);
 
-          case 36:
+          case 31:
           case "end":
             return _context.stop();
         }
@@ -32778,11 +32825,11 @@ module.exports.default = exports.default;
 
 __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
 
-__webpack_require__(/*! regenerator-runtime/runtime.js */ "./node_modules/regenerator-runtime/runtime.js");
+__webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
 
 __webpack_require__(/*! bootstrap/scss/bootstrap.scss */ "./node_modules/bootstrap/scss/bootstrap.scss");
 
-var _sidebar = _interopRequireDefault(__webpack_require__(/*! ./components/sidebar/sidebar */ "./src/components/sidebar/sidebar.js"));
+var _sidebarHighlighting = _interopRequireDefault(__webpack_require__(/*! ./components/sidebar/sidebarHighlighting */ "./src/components/sidebar/sidebarHighlighting.js"));
 
 var _sandwichMenu = _interopRequireDefault(__webpack_require__(/*! ./components/sandwichMenu/sandwichMenu */ "./src/components/sandwichMenu/sandwichMenu.js"));
 
@@ -32790,9 +32837,12 @@ var _menuSelector = _interopRequireDefault(__webpack_require__(/*! ./components/
 
 var _renderTable = _interopRequireDefault(__webpack_require__(/*! ./components/table/renderTable */ "./src/components/table/renderTable.js"));
 
+__webpack_require__(/*! ../favicon.ico */ "./favicon.ico");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 (0, _sandwichMenu["default"])();
+(0, _sidebarHighlighting["default"])();
 (0, _menuSelector["default"])();
 (0, _renderTable["default"])();
 

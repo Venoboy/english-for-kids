@@ -7219,7 +7219,7 @@ a.text-dark:hover, a.text-dark:focus {
   height: 250px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 20px 25px;
+  margin: 25px 30px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
   transition: box-shadow .25s linear, transform .7s; }
 
@@ -7268,6 +7268,10 @@ a.text-dark:hover, a.text-dark:focus {
   transition: 0.3s;
   -webkit-filter: grayscale(1);
           filter: grayscale(1); }
+
+@media (max-width: 370px) {
+  .src-components-table-rotatingCard-_rotatingCard-module__card--2309X {
+    margin: 15px 5px; } }
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -14501,7 +14505,7 @@ body {
   overflow-x: hidden; }
 
 #sidebar-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   min-height: 100vh;
@@ -14537,6 +14541,10 @@ body {
 
 #wrapper.toggled #sidebar-wrapper {
   margin-left: -15rem; }
+
+.list-group-item.active {
+  color: #495057 !important;
+  background: #dae0e5 !important; }
 
 .cardMain {
   width: 300px;
@@ -14578,6 +14586,7 @@ body {
 
 .navbar {
   position: fixed;
+  z-index: 150;
   top: 0;
   left: 0;
   width: 100%;
@@ -14586,6 +14595,13 @@ body {
 
 .cardMain {
   margin: 25px 30px; }
+
+@media (max-width: 370px) {
+  .cardMain {
+    margin: 15px 5px; }
+  .navbar {
+    padding: 10px 0;
+    margin: 0; } }
 
 #sandwichmenu {
   z-index: 500;
@@ -14642,6 +14658,212 @@ svg:not(:root) {
 
 .js_menu.active {
   display: block; }
+
+body {
+  --text-before: #153054;
+  --text-after: #FF0000;
+  --face-before: #AEB8D1;
+  --face-after: #679DFF;
+  --face-details-before: #5B6F8F;
+  --face-details-after: rgba(0,33,71,1);
+  --tongue: red; }
+
+.toggle-wrapper {
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  display: block;
+  z-index: 500;
+  position: relative;
+  height: 20px;
+  transform: translate3d(-50%, -50%, 0); }
+  .toggle-wrapper input {
+    position: absolute;
+    left: -99em; }
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 50px;
+  background-color: white;
+  border-radius: 84px;
+  font-size: 18px; }
+  .toggle:before {
+    content: 'Train';
+    position: absolute;
+    right: -50px;
+    top: 14px;
+    width: 195px;
+    color: var(--text-before); }
+  .toggle:after {
+    content: 'Play!';
+    position: absolute;
+    top: 14px;
+    right: -18px;
+    width: 160px;
+    color: var(--text-after); }
+
+.toggle-handler {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 4px;
+  left: 4px;
+  width: 42px;
+  height: 42px;
+  background-color: var(--face-before);
+  border-radius: 50px;
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: rotate(-45deg); }
+
+.face {
+  position: absolute;
+  background-color: var(--face-details-before);
+  opacity: 1;
+  transition-delay: 200ms;
+  transform: rotate(45deg); }
+
+.eye-left {
+  top: 8px;
+  left: 16px;
+  z-index: 0;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px; }
+
+.eye-right {
+  top: 19px;
+  left: 27px;
+  z-index: 0;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px; }
+
+.nose {
+  transition-delay: 200ms;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 12px;
+  top: 20px;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid var(--face-details-before); }
+
+.mouth1 {
+  top: 24px;
+  left: 14px;
+  z-index: 0;
+  width: 2px;
+  height: 6px; }
+
+.mouth2 {
+  top: 28px;
+  left: 6px;
+  border-radius: 25%;
+  z-index: 0;
+  width: 14px;
+  height: 2px; }
+
+.face2 {
+  transition-delay: 200ms;
+  opacity: 0; }
+
+.mouth-smile {
+  position: absolute;
+  left: 12px;
+  top: 21px;
+  transform: translate(-50%, 0%) rotate(45deg);
+  width: 11px;
+  height: 6px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 2px solid var(--face-details-after);
+  border-top: 0;
+  box-sizing: border-box; }
+
+.mouth-smile2 {
+  position: absolute;
+  left: 18px;
+  top: 27px;
+  transform: translate(-50%, 0%) rotate(45deg);
+  width: 11px;
+  height: 6px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 2px solid var(--face-details-after);
+  border-top: 0;
+  box-sizing: border-box; }
+
+.left-ear {
+  box-sizing: content-box;
+  transition-delay: 200ms;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 5px;
+  height: 10px;
+  border-top: 7px solid var(--face-before);
+  border-right: 8px solid var(--face-before);
+  border-radius: 15% 20%; }
+
+.right-ear {
+  box-sizing: content-box;
+  transition-delay: 200ms;
+  position: absolute;
+  top: 19px;
+  left: 27px;
+  width: 5px;
+  height: 10px;
+  border-top: 7px solid var(--face-before);
+  border-left: 8px solid var(--face-before);
+  border-radius: 20% 15%;
+  transform: rotate(80deg); }
+
+.tongue {
+  opacity: 0;
+  transition-delay: 200ms;
+  width: 7px;
+  height: 7px;
+  background-color: var(--tongue);
+  position: absolute;
+  bottom: -28px;
+  left: -4px;
+  transform: rotate(145deg);
+  border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%; }
+
+input:not(:checked) + .toggle:before {
+  display: block; }
+
+input:not(:checked) + .toggle:after {
+  display: none; }
+
+input:checked + .toggle:before {
+  display: none; }
+
+input:checked + .toggle:after {
+  display: block; }
+
+input:checked + .toggle .toggle-handler {
+  background-color: var(--face-after);
+  transform: translate3d(40px, 0, 0) rotate(-45deg); }
+  input:checked + .toggle .toggle-handler .face {
+    background-color: var(--face-details-after); }
+  input:checked + .toggle .toggle-handler .nose {
+    border-top: 8px solid var(--face-details-after); }
+  input:checked + .toggle .toggle-handler .right-ear {
+    border-top: 7px solid var(--face-after);
+    border-left: 8px solid var(--face-after); }
+  input:checked + .toggle .toggle-handler .left-ear {
+    border-top: 7px solid var(--face-after);
+    border-right: 8px solid var(--face-after); }
+  input:checked + .toggle .toggle-handler .mouth2 {
+    opacity: 0; }
+  input:checked + .toggle .toggle-handler .face2,
+  input:checked + .toggle .toggle-handler .tongue {
+    opacity: 1; }
 
 
 /*# sourceMappingURL=style.css.map*/

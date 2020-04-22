@@ -6,15 +6,21 @@
   justify-content: center;
   max-width: 1200px;
 }
-
+//.bg-light {
+//  background: $teal !important;
+//}
 .navbar {
   position: fixed;
+  z-index: 150;
   top:0;
   left: 0;
   width: 100%;
 
   display: flex;
   justify-content: space-between;
+
+  //background: rgb(255, 188, 0);
+  //background: $teal;
 }
 
 .cardMain {
@@ -31,3 +37,13 @@
 //  grid-gap: 30px 25px;
 //  grid-template-columns: repeat(3, 300px);
 //}
+
+@media (max-width: 370px) {
+  .cardMain {
+    margin: 15px 5px;
+  }
+  .navbar {
+    padding: 10px 0 ;
+    margin: 0 ;
+  }
+}

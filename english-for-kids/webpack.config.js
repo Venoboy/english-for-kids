@@ -81,6 +81,10 @@ module.exports = (env, options) => {
           },
         },
         {
+          test: /\.ico$/,
+          loader: 'file-loader?name=[name].[ext]'
+        },
+        {
           test: /\.(ttf|eot|woff|woff2)$/,
           use: {
             loader: "file-loader",

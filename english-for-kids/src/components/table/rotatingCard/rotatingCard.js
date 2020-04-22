@@ -1,7 +1,7 @@
 import classes from './_rotatingCard.module.scss';
 
 const rotatingCard = async (data) => {
-  let div = document.createElement('div');
+  const div = document.createElement('div');
   div.classList.add(classes.card);
 
   const divFront = document.createElement('div');
@@ -13,7 +13,7 @@ const rotatingCard = async (data) => {
   const rotateImg = document.createElement('div');
   rotateImg.className = classes.rotate;
   rotateImg.onclick = () => {
-    div.style.transform = 'rotateY(180deg)'
+    div.style.transform = 'rotateY(180deg)';
   };
   divFront.append(frontText, rotateImg);
 
@@ -32,7 +32,7 @@ const rotatingCard = async (data) => {
 
   divFront.onclick = async (ev) => {
     ev.preventDefault();
-    let audio = document.createElement('AUDIO');
+    const audio = document.createElement('AUDIO');
     const audioPath = await import(`../../../assets/${data.audioSrc}`);
     audio.src = audioPath.default;
     if (ev.target !== rotateImg) {
@@ -41,7 +41,7 @@ const rotatingCard = async (data) => {
   };
 
   div.onmouseleave = () => {
-    div.style.transform = 'rotateY(0)'
+    div.style.transform = 'rotateY(0)';
   };
 
   div.append(divFront, divBack);

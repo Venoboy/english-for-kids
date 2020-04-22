@@ -1,12 +1,14 @@
 import 'bootstrap';
-import "regenerator-runtime/runtime.js";
+import 'regenerator-runtime';
 
 import 'bootstrap/scss/bootstrap.scss';
-import sidebar from "./components/sidebar/sidebar";
-import sandwichMenu from "./components/sandwichMenu/sandwichMenu";
-import menuSelector from "./components/sidebar/menuSelector";
-import renderTable from "./components/table/renderTable";
+import sidebarHighlighting from './components/sidebar/sidebarHighlighting';
+import sandwichMenu from './components/sandwichMenu/sandwichMenu';
+import menuSelector from './components/sidebar/menuSelector';
+import renderTable from './components/table/renderTable';
+import '../favicon.ico'
 
 sandwichMenu();
+sidebarHighlighting();
 menuSelector();
 renderTable();
