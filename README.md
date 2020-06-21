@@ -1,2 +1,3 @@
-# venoboy-RS2020Q1
-Private repository for @venoboy
+Обучение английскому языку для детей. Работает режим тренировки.
+
+[Ссылка на работающий проект](https://venoboy.netlify.app/#)
