@@ -26,6 +26,10 @@ body {
   }
 }
 
+.doggle {
+  visibility: hidden;
+}
+
 .toggle {
   cursor: pointer;
   display: inline-block;
